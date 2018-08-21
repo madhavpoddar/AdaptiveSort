@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="IntegerArrayGenerator.h" />
     <ClInclude Include="MergeSort.h" />
     <ClInclude Include="stdafx.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="targetever.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="IntegerArrayGenerator.cpp">
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
     </ClCompile>

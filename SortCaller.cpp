@@ -19,12 +19,13 @@ void SortCaller::CallSortOnVector()
 {
 	high_resolution_clock::time_point t1, t2;
 	duration<double> time_span;
+	/******************************Merge Sort*******************************************/
 	cout << "Calling Merge Sort";
-	vector<unsigned long int> temp = inputVector;
+	vector<unsigned long int> tempMergeSort = inputVector;
 	MergeSort objMergeSort = MergeSort();
 
 	t1 = high_resolution_clock::now();
-	objMergeSort.Sort(temp, 0, temp.size() - 1);
+	objMergeSort.Sort(tempMergeSort, 0, tempMergeSort.size() - 1);
 	t2 = high_resolution_clock::now();
 	time_span = duration_cast<duration<double>>(t2 - t1);
 	/*std::ofstream output_file("sorted.txt");
@@ -32,5 +33,18 @@ void SortCaller::CallSortOnVector()
 	for (const auto &e : temp) output_file << e << "\n";*/
 	cout << "Time taken in Merge  Sort : " << time_span.count() << " seconds." << std::endl;
 
+	/******************************Insertion Sort*******************************************/
+	cout << "Calling Insertion Sort";
+	vector<unsigned long int> tempInsertionSort = inputVector;
+	InsertionSort objInsertionSort = InsertionSort();
+
+	t1 = high_resolution_clock::now();
+	objInsertionSort.Sort(tempInsertionSort);
+	t2 = high_resolution_clock::now();
+	time_span = duration_cast<duration<double>>(t2 - t1);
+	/*std::ofstream output_file("sorted.txt");
+	std::ostream_iterator<string> output_iterator(output_file, "\n");
+	for (const auto &e : temp) output_file << e << "\n";*/
+	cout << "Time taken in Insertion  Sort : " << time_span.count() << " seconds." << std::endl;
 
 }

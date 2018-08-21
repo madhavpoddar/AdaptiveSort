@@ -9,6 +9,7 @@
 #include <iterator>
 
 #include "MergeSort.h"
+#include "InsertionSort.h"
 
 using namespace std;
 
