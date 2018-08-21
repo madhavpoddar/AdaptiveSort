@@ -1,3 +1,5 @@
+
+#include "pch.h"
 #include "stdafx.h"
 
 #include "MergeSort.h"
@@ -18,9 +20,9 @@ void MergeSort::SortFunc(vector<unsigned long int>& vec, int l, int m, int r)
 
 	/* Copy data to temp arrays L[] and R[] */
 	for (i = 0; i < n1; i++)
-		vec1[i] = vec[l + i];
+		vec1.push_back(vec[l + i]);
 	for (j = 0; j < n2; j++)
-		vec2[j] = vec[m + 1 + j];
+		vec2.push_back(vec[m + 1 + j]);
 
 	/* Merge the temp arrays back into arr[l..r]*/
 	i = 0; // Initial index of first subarray
