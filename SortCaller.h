@@ -10,6 +10,8 @@
 
 #include "MergeSort.h"
 #include "InsertionSort.h"
+#include "QuickSort.h"
+
 
 using namespace std;
 
