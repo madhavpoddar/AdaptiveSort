@@ -11,7 +11,7 @@ QuickSort::QuickSort()
 
 void QuickSort::swap(unsigned long int* a, unsigned long int* b)
 {
-	int t = *a;
+	unsigned long int t = *a;
 	*a = *b;
 	*b = t;
 }
